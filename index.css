@@ -31,8 +31,9 @@
 }
 
 .content {
+    color: #33cccc;
     border-radius: 8px;
-    background-color: #3ef5f5;
+    background-color: #ffffff;
     margin: 10px;
     box-shadow: 0px 8px 7px 2px #249393;
 }
