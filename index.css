@@ -11,7 +11,6 @@
 }
 
 .body > *{
-    padding: 10px;
     flex: 1 100%;
 }
 
@@ -26,8 +25,6 @@
     .right-side {order: 3;}
     .footer {order: 3;}
 }
-
-body {padding:  2em;}
 
 .left-side{
     background-color: blue;
