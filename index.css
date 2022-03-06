@@ -10,7 +10,7 @@
     text-align: center;
 }
 
-.body > *{
+.body > *{    
     flex: 1 100%;
 }
 
@@ -31,7 +31,10 @@
 }
 
 .content {
-    background-color: green;
+    border-radius: 8px;
+    background-color: #3ef5f5;
+    margin: 10px;
+    box-shadow: 0px 8px 7px 2px #249393;
 }
 
 .right-side{
