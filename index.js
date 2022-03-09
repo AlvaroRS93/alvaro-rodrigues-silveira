@@ -5,4 +5,4 @@ esconderSobreMim = function(){
     this.escondido = !this.escondido;
     sobreMim.hidden = this.escondido;
     console.log(sobreMim.hidden);
-}
+};

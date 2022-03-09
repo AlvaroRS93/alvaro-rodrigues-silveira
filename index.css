@@ -1,6 +1,6 @@
 * {
     padding: 0;
-    margin: 0;
+    margin: 0;    
 }
 
 .body {
@@ -98,6 +98,7 @@
 
 .cabecalho .botao:hover{
     background-color: white ;
+    transition: 0s !important;
     
     text-decoration: none;
 }
@@ -130,7 +131,8 @@ html, body, .body{
     background: #33cccc;
 }
 
-.menu .botao, .divisorMenu{    
+.menu .botao, .divisorMenu{ 
+    font-size: 20px;   
     display: inline-block;           
     cursor: 300;
     font-weight: 300;    
@@ -141,23 +143,14 @@ html, body, .body{
     overflow: hidden;
 } 
 
-@media (min-width: 800px) {
-    .menu .botao, .divisorMenu{
-        font-size: 20px;
+@media (min-width: 770px) {
+    .menu .botao, .divisorMenu{        
         padding: 10px 20px; 
     }       
 }
 
-@media (max-width: 799px) {
-    .menu .botao, .divisorMenu{
-        font-size: 15px;
-        padding: 10px 5px; 
-    }       
-}
-
-@media (max-width: 350px) {
-    .menu .botao {
-        font-size: 15px;
+@media (max-width: 769px) {
+    .menu .botao {        
         padding: 10px 5px; 
         display: block;
         border: 1px solid white;
@@ -189,4 +182,89 @@ html, body, .body{
     
     z-index: -1;
     transition: all 0.6s ease;
+}
+
+/*Menu hamburguer*/
+@media (max-width: 400px){
+    .menuSmall{
+        display: flex; 
+    }
+    .menu{
+        display: none;
+    }
+}
+
+@media (min-width: 401px){
+    .menuSmall{
+        display: none; 
+    }
+    .menu{
+        display: block;
+    }
+}
+
+.menuSmall{       
+    justify-content: flex-end;
+    background: #33cccc;    
+    padding-right: 10px;
+    padding-bottom: 5px;
+  }
+
+#checkbox-menu{
+    position: absolute;
+    opacity: 0;
+  }
+  
+  label{
+    cursor: pointer;
+    position: relative;
+    display: block;
+    height: 22px;
+    width: 30px;
+  }
+  
+  label span{
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 100%;
+    border-radius: 30px;
+    background: #ffffff;
+    transition: 0.25s ease-in-out;
+  }
+  
+  label span:nth-child(1){
+    top: 0;
+  }
+  
+  label span:nth-child(2){
+    top: 8px;
+  }
+  
+  label span:nth-child(3){
+    top: 16px;
+  }
+  
+  #checkbox-menu:checked + label span:nth-child(1){
+    transform: rotate(-45deg);
+    top: 8px;
+  }
+  
+  #checkbox-menu:checked + label span:nth-child(2){
+    opacity: 0;
+  }
+  
+  #checkbox-menu:checked + label span:nth-child(3){
+    transform: rotate(45deg);
+    top:8px;
+  }
+
+  #backMenu {
+    background-color: black;        
+  }
+
+  input[id="checkbox-menu"]:checked + #backMenu{  
+  width: 50px;
+  height: 50px;  
+  transition: all 2s ease;
 }
