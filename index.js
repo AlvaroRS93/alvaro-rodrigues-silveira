@@ -9,8 +9,10 @@ esconderSobreMim = function(){
 
 toggleMenu = function(bool){
     var menuHamburguer = document.getElementById("backMenu");
-    console.log(bool);    
+    console.log(menuHamburguer.offsetTop);            
+    console.log(menuHamburguer.offsetLeft);            
     //menuHamburguer.style.height = bool ? "100%" : "0";
     menuHamburguer.style.width = bool ? "100%" : "0";
+    //window.scrollTo
     
 }
